@@ -1,3 +1,1 @@
-
-
-console.log("vou mostrar para a galera o git reset");
+console.log("Alô mãe, estou ao vivo");

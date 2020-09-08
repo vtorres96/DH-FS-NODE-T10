@@ -1,4 +1,4 @@
-function trocarPalavraDaFrase(frase, busca, substituicao) {
+function substituirPalavraDaFrase(frase, busca, substituicao) {
   return frase.replace(busca, substituicao)
 }
 

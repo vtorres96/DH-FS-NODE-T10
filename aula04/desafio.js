@@ -17,4 +17,4 @@ const trocarTodasPalavrasDaFrase = (frase, busca, substituicao) =>
 // resolvendo de forma que altere todas ocorrencias - com padrao ES6 e utilizando arrow function
 console.log(trocarTodasPalavrasDaFrase('Gosto de programar em VBA, pois, VBA é legal', 'VBA', 'JS'))
 
-console.log(trocarPalavraDaFrase('E aí, pessoal!', 'pessoal', 'programadores'));
+console.log(trocarPalavraDaFrase('E aí, pessoal!', 'pessoal', 'devs'));

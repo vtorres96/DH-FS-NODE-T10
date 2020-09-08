@@ -1,5 +1,5 @@
-function trocarPalavraDaFrase(frase, busca, substituicao) {
-  return frase.replace(busca, substituicao)
+function trocarPalavraDaFrase(texto, buscar, substituir) {
+  return texto.replace(buscar, substituir)
 }
 
 const trocarPalavraDaFraseArrowFunction = (frase, busca, substituicao) =>

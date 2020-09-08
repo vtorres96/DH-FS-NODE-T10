@@ -11,6 +11,7 @@ const trocarTodasPalavrasDaFrase = (frase, busca, substituicao) =>
 // resolvendo de forma que altere apenas a primeira ocorrencia - com function normal sem seguir padrao ES6 e utilizando arrow function
 // console.log(trocarPalavraDaFrase('Gosto de programar em VBA, pois, VBA é legal', 'VBA', 'JS'))
 
+console.log("Web Full Stack na veia");
 // resolvendo de forma que altere apenas a primeira ocorrencia - com padrao ES6 e utilizando arrow function
 // console.log(trocarPalavraDaFraseArrowFunction('Gosto de programar em VBA, pois, VBA é legal', 'VBA', 'JS'))
 

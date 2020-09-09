@@ -1,5 +1,5 @@
-function trocarPalavraDaFrase(texto, buscar, substituir) {
-  return texto.replace(buscar, substituir)
+function substituirPalavraDaFrase(frase, busca, substituicao) {
+  return frase.replace(busca, substituicao)
 }
 
 const trocarPalavraDaFraseArrowFunction = (frase, busca, substituicao) =>
@@ -18,4 +18,4 @@ console.log("Web Full Stack na veia");
 // resolvendo de forma que altere todas ocorrencias - com padrao ES6 e utilizando arrow function
 console.log(trocarTodasPalavrasDaFrase('Gosto de programar em VBA, pois, VBA é legal', 'VBA', 'JS'))
 
-console.log(trocarPalavraDaFrase('E aí, pessoal!', 'pessoal', 'programadores'));
+console.log(substituirPalavraDaFrase('E aí, pessoal!', 'pessoal', 'devs'));

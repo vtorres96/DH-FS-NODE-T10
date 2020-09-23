@@ -4,21 +4,11 @@ const express = require("express")
 // criando aplicacao express
 const app = express()
 
-app.get('/', (req, res) => {
-  let array = ['item 1', 'item 2', 'item 3']
-  let objeto = {"nome": "Victor"}
-  let arrayDeObjetos = [
-    {
-      "nome": "Victor"
-    },
-    {
-      "nome": "Murilo"
-    },
-  ]
-  res.send(arrayDeObjetos)
-})
+// importando rotas da aplicacao
+const routes = require("./routes")
+
+app.use(routes)
 
 app.listen(3000, () => {
-  console.log('QUERO COMER, BORA PRO INTERVALO')
+  console.log('servidor rodando na porta 3000')
 })
-

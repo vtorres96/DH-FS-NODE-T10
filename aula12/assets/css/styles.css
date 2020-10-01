@@ -1,0 +1,31 @@
+/* HEADER */
+header {
+  height: 10%;
+  width: 100%;
+  background-color: #ffb90f;
+  margin-top: 70px;
+  position: relative;
+}
+
+header nav img {
+  width: 200px;
+  position: absolute;
+  top: -65px;
+}
+
+header nav ul {
+  list-style: none;
+  height: 60px;
+  margin-left: 160px;
+}
+
+header nav ul li { 
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  padding: 15px 0 0 50px;
+}
+
+
+

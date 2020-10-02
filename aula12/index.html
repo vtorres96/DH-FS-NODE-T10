@@ -3,21 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Craftsy</title>
+  <title>Craftsy - Home</title>
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
 
+  <!-- Desafio 1 - redirecionar para #smartphones quando clicar no item Smartphone,
+  #tablets quando clicar no item Tablets e quando clicar no item Contato
+  redirecionar para página contato.html (que estará em branco por enquanto)
+
+  Desafio 1.1 - criar uma tag de form e dentro dela adicionar um campo para que
+  o usuário possa digitar algo, dentro do campo deve ficar um texto "Pesquise o produto"
+  enquanto o usuário não digitar nada, após o usuário começar a digitar esse texto
+  deve "sumir" e adicionar na tela um botão escrito "Enviar" (também dentro do form). -->
   <header>
     <nav>
       <img src="img/logo.png" alt="Craftsy">
       <ul>
-        <li>Smartphones</li>
-        <li>Tablets</li>
-        <li>Contato</li>
+        <li><a href="#smartphones">Smartphones</a></li>
+        <li><a href="#tablets">Tablets</a></li>
+        <li><a href="./contato.html" target="_blank">Contato</a></li>
       </ul>
+      <form action="">
+        <input type="text" placeholder="Pesquise o produto">
+        <button>Enviar</button>
+      </form>
     </nav>
   </header>
+
+  <!-- Desafio 2 - Criar dentro da tag article, uma tag que exiba a imagem de um produto 
+  (não precisa focar em ordem de produto), uma tag div que contenha o texto "Nome do produto"
+  uma tag button que exiba um botão escrito "Ver mais" -->
+
+  <!-- Desafio 3 - na tag main aplicar uma largura de 960px, uma altura de 650px 
+  e margin vertical de 40px e horizontal com formato "auto"
+
+  Desafio 3.1 - na tag article aplicar em product a largura e altura de 300px
+  e aplicar o valor cover para uma propriedade misteriosa hahaha
+  juntamente com fundo possuindo a cor preta -->
+  
+  <main class="container">
+    <section>
+      <article class="product product-image-1">
+        <img src="./img/label.png" alt="" class="img-label">
+        <div class="name-product">Nome do produto</div>
+        <button class="see-more">Ver mais</button>
+      </article>
+
+      <article class="product product-image-1">
+        <img src="./img/label.png" alt="" class="img-label">
+        <div class="name-product">Nome do produto</div>
+        <button class="see-more">Ver mais</button>
+      </article>
+
+      <article class="product product-image-1">
+        <img src="./img/label.png" alt="" class="img-label">
+        <div class="name-product">Nome do produto</div>
+        <button class="see-more">Ver mais</button>
+      </article>
+
+      <article class="product product-image-1">
+        <img src="./img/label.png" alt="" class="img-label">
+        <div class="name-product">Nome do produto</div>
+        <button class="see-more">Ver mais</button>
+      </article>
+
+      <article class="product product-image-1">
+        <img src="./img/label.png" alt="" class="img-label">
+        <div class="name-product">Nome do produto</div>
+        <button class="see-more">Ver mais</button>
+      </article>
+
+      <article class="product product-image-1">
+        <img src="./img/label.png" alt="" class="img-label">
+        <div class="name-product">Nome do produto</div>
+        <button class="see-more">Ver mais</button>
+      </article>
+    </section>
+  </main>
 
 </body>
 </html> 

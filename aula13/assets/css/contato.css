@@ -1,0 +1,39 @@
+main section h1 {
+  font-size: 38px;
+  text-align: center;
+}
+
+main section p {
+  font-size: 22px;
+  text-align: center;
+}
+
+main section form { 
+  /* sugestao para centralizar do Anselmo */
+  /* text-align: center; */
+  width: 70%;
+  margin: 0 auto;
+}
+
+main section form label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+  /* sugestao para centralizar do Anselmo */
+  /* text-align: start; */
+}
+
+form div.form-inline div {
+  display: inline-block;
+  margin: 10px;
+}
+
+form div.form-inline input.input-contato {
+  height: 20px;
+  width: 300px;
+}
+
+form div.form-inline textarea.textarea-contato {
+  resize: none;
+  width: 635px;
+}

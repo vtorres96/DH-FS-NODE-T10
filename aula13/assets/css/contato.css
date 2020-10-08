@@ -37,3 +37,12 @@ form div.form-inline textarea.textarea-contato {
   resize: none;
   width: 635px;
 }
+
+form div.form-inline button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #ffb90f
+}

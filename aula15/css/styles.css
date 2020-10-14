@@ -1,0 +1,11 @@
+.header {
+  background-color: aqua;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.section {
+  background-color: fuchsia;
+  height: 150px;
+  margin-bottom: 15px;
+}

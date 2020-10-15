@@ -1,11 +1,28 @@
 .header {
-  background-color: aqua;
+  background-color: aquamarine;
   height: 150px;
   margin-bottom: 15px;
 }
 
-.section {
-  background-color: fuchsia;
+.section-one {
+  background-color: blueviolet;
   height: 150px;
   margin-bottom: 15px;
+}
+
+.section-two {
+  background-color: salmon;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.section-three {
+  background-color: sandybrown;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.footer {
+  background-color: aquamarine;
+  height: 150px;
 }

@@ -26,3 +26,15 @@
   background-color: aquamarine;
   height: 150px;
 }
+
+
+@media (max-width: 540px) {
+
+  .header, .footer {
+    background-color: darkblue;
+  }
+
+  .section-one, .section-two, .section-three{
+    background-color: rgb(104, 216, 76);
+  }
+}

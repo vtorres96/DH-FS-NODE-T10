@@ -1,7 +1,7 @@
 <%- include('./partials/head'); %>
 <%- include('./partials/header'); %>
 
-  <main class="container">
+<main class="container contacts-table">
     <section class="mt-3" id="cards">
       <h1>Mensagens de Contato</h1>
       <p>Confira abaixo as mensagens recebidas</p>
@@ -16,12 +16,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
+          <% contatos.forEach(contato => { %>
+            <tr>
+              <th scope="row"><%= contato.id %> </th>
+              <td><%= contato.nome %> </td>
+              <td><%= contato.email %> </td>
+              <td><%= contato.mensagem %> </td>
+            </tr>
+          <% }) %>
         </tbody>
       </table>
 

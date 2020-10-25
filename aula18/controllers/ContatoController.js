@@ -38,7 +38,7 @@ module.exports = {
   },
 
   listar(req, res, next) {
-    res.render('contatos', contatos)
+    res.render('contatos', { contatos: contatos })
   },
 
   excluir(req, res, next) {

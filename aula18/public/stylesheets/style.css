@@ -12,6 +12,10 @@ a {
   color: #00B7FF;
 }
 
+.contacts-table {
+  height: calc(100vh - 100px);
+}
+
 .logo {
   width: 50px;
   height: 50px;

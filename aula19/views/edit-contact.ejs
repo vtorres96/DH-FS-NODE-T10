@@ -1,0 +1,38 @@
+<%- include('./partials/head'); %>
+<%- include('./partials/header'); %>
+
+  <main class="container contacts-table">
+    <section id="contato" class="mt-5">
+      <h1>Alteração de Mensagem de Contato</h1>
+      <p class="text-muted">Preencha o formulário abaixo com as alterações desejadas para alterar uma mensagem de contato</p>
+      <form action="/contato/alterar/<%= contact.id %>" method="POST">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="input-nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="input-nome" value="<%= contact.name %>">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="input-email">E-mail</label>
+            <input type="email" class="form-control" name="email" id="input-email" value="<%= contact.email %>">
+          </div>
+          <div class="form-group col-md-12">
+            <label for="textarea-mensagem">Mensagem</label>
+            <textarea name="mensagem" class="form-control" id="textarea-mensagem" rows="10"><%= contact.message %></textarea>
+          </div>
+        </div>
+        <% if (typeof updated !== "undefined") { %>
+          <div class="form-group col-md-12 alert alert-success">
+            Mensagem de contato atualizada com sucesso
+          </div>
+        <% } %> 
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <%- include('./partials/footer'); %>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,83 @@
+<%- include('./partials/head'); %>
+<%- include('./partials/header'); %>
+
+<main class="container contacts-table">
+    <section class="mt-3" id="cards">
+      <h1>Mensagens de Contato</h1>
+      <p>Confira abaixo as mensagens recebidas</p>
+
+      <% if (typeof deleted !== "undefined") { %>
+        <div class="col-md-12 alert alert-success">
+          Mensagem de contato excluída com sucesso
+        </div>
+      <% } %> 
+      <% if (contacts.length == 0) { %>
+        <div class="col-md-12 alert text-center">
+          Não há mensagens de contatos para serem listadas 
+        </div>
+      <% } else { %>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Código</th>
+              <th scope="col">Nome</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Mensagem</th>
+              <th scope="col" colspan="2">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% contacts.forEach(contact => { %>
+              <tr>
+                <th scope="row"><%= contact.id %> </th>
+                <td><%= contact.name %> </td>
+                <td><%= contact.email %> </td>
+                <td><%= contact.message %> </td>
+                <td>
+                  <a href="/contato/alterar/<%= contact.id %>">
+                    <i class="fas fa-edit"></i>
+                  </a> 
+                </td>
+                <td>
+                  <a href="#" data-toggle="modal" data-target="#modal-contact-<%= contact.id %>">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="modal-contact-<%= contact.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Deseja realmente excluir ?</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Mensagem: <%= contact.message %></p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                          <a href="/contato/excluir/<%= contact.id %>">
+                            <button type="button" class="btn btn-danger">Excluir</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      <% } %>
+
+
+    </section>
+  </main>
+
+  <%- include('./partials/footer'); %>
+  </body>
+</html>
+
+
+

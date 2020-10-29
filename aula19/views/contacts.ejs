@@ -23,7 +23,7 @@
               <th scope="col">Nome</th>
               <th scope="col">E-mail</th>
               <th scope="col">Mensagem</th>
-              <th scope="col">Ações</th>
+              <th scope="col" colspan="2">Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -33,17 +33,17 @@
                 <td><%= contact.name %> </td>
                 <td><%= contact.email %> </td>
                 <td><%= contact.message %> </td>
-                <td colspan="2">
+                <td>
                   <a href="/contato/alterar/<%= contact.id %>">
                     <i class="fas fa-edit"></i>
                   </a> 
                 </td>
                 <td>
-                  <a href="#" data-toggle="modal" data-target="#modal-contato-<%= contact.id %>">
+                  <a href="#" data-toggle="modal" data-target="#modal-contact-<%= contact.id %>">
                     <i class="fas fa-trash-alt"></i>
                   </a>
                   <!-- Modal -->
-                  <div class="modal fade" id="modal-contato-<%= contact.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="modal-contact-<%= contact.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">

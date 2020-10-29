@@ -1,4 +1,4 @@
-const { cards } = require("../data/data")
+const { cards } = require("../data/cards")
 
 module.exports = {
   index(req, res, next) {

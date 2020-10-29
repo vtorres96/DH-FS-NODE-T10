@@ -1,5 +1,8 @@
-const { contacts, cards } = require("../data/data")
+const fs = require("fs");
+const path = require("path");
 
+const contacts = require("../data/contacts")
+const { cards } = require("../data/cards")
 
 module.exports = {
   list(req, res, next) {
@@ -10,6 +13,12 @@ module.exports = {
     let id = contacts.length + 1
     let contact = { id, ...req.body }
     contacts.push(contact)
+
+    let contactsJson = JSON.stringify(contacts);
+    let filePath = path.join("data", "contacts.js");
+
+    fs.writeFileSync(filePath, 'module.exports = ');
+    fs.appendFileSync(filePath, contactsJson);
 
     res.render('index', { cards, added: true });
   }, 
@@ -30,12 +39,24 @@ module.exports = {
     contact.email = email
     contact.message = mensagem
 
+    let contactsJson = JSON.stringify(contacts);
+    let filePath = path.join("data", "contacts.js");
+
+    fs.writeFileSync(filePath, 'module.exports = ');
+    fs.appendFileSync(filePath, contactsJson);
+
     res.render('edit-contact', { contact, updated: true })
   },
 
   delete(req, res, next) {
     let id = req.params.id;
     contacts.splice(id - 1, 1);
+
+    let contactsJson = JSON.stringify(contacts);
+    let filePath = path.join("data", "contacts.js");
+
+    fs.writeFileSync(filePath, 'module.exports = ');
+    fs.appendFileSync(filePath, contactsJson);
 
     res.render('contacts', { contacts, deleted: true });
   },

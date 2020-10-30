@@ -1,0 +1,44 @@
+ter um método chamado advinheOMelhorCursoDaDH, que receberá um parâmetro,
+se o parâmetro for o curso que realmente queremos iremos retornar algo,
+caso contrário, retornaremos outra coisa.
+
+function advinheOMelhorCursoDaDH(curso){
+  if(curso == 'Full Stack'){
+    console.log('Acerto mizeravi')
+  } else {
+    console.log('Que pena, que pena amô')
+  }
+
+  return data
+}
+
+Pensem que de acordo com a resposta do metodo advinheOMelhorCursoDaDH iremos 
+oferecer as materias mais bacanas do curso de Full Stack, caso a pessoa acerte o 
+melhor curso, caso contrario iremos retornar uma mensagem qualquer também
+
+function melhoresMateriasDoMelhorCurso(data){
+  if(data == 'Full Stack'){
+    console.log('As melhores materias são criação de API e React')
+  } else {
+    console.log('Que pena você não acertou o curso, portanto, não iremos listar matéria alguma')
+  }
+}
+
+advinheOMelhorCursoDaDH -> dependendo da resposta do metodo anterior a execucao do metodo
+melhoresMateriasDoMelhorCurso acaba mudando, ou seja, oferece uma resposta diferente
+
+
+
+capa -> páginas 
+empreendimento Paulista Tower Torres(terreno) - 
+2 torres (torre A predio de luxo e torre B predio mais acessivel)
+imagina que a torre A possua 10 unidades e a torre B possua 20
+quadrado Torre A - quadrado torre B
+
+encontro a torre A e busco as unidades pertencentes a torre A
+encontro a torre B e busco s unidades pertencentes a torre B
+
+retorno = [
+  {torreA: {metragem, qtdComodos, varanda, vagasGargem}, {metragem, qtdComodos, varanda, vagasGargem} }
+  {torreB: {metragem, qtdComodos, varanda, vagasGargem}, {metragem, qtdComodos, varanda, vagasGargem} }
+]

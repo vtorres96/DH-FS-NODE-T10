@@ -16,7 +16,7 @@ form textarea {
   resize: none;
 }
 
-.contacts-table {
+.page-min-height {
   height: calc(100vh - 100px);
 }
 

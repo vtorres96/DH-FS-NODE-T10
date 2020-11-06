@@ -1,0 +1,1 @@
+module.exports = [{"id":1,"name":"Admin","email":"admin@admin.com.br","password":"123456"},{"id":2,"name":"Viteira","email":"viteira@gmail.com","password":"$2b$10$PwHpg0LCowL69J1sBrW9C.0NhtfVXrhzCwG9crDKgyh2DY6R5dC7C"}]

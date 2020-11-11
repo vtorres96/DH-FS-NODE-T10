@@ -35,8 +35,17 @@ module.exports = {
       return res.render('login', { notFound: true });
     }
 
+    // removendo a propriedade password para nao criar sessao
+    // contendo a senha do usuario logado
+    delete user.password;
+
     req.session.user = user;
 
     res.render('index', { user: req.session.user, cards });
+  },
+
+  logout(req, res, next) {
+    req.session.destroy();
+    res.redirect('/');
   }
 }

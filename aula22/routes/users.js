@@ -8,4 +8,6 @@ router.post('/registrar', UserController.save);
 router.get('/autenticar', UserController.login);
 router.post('/autenticar', UserController.authenticate);
 
+router.get('/deslogar', UserController.logout);
+
 module.exports = router;

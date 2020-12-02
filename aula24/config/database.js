@@ -1,9 +1,9 @@
 const config = {
-  username: 'root',
-  password: '',
+  username: 'sergio',
+  password: 'vaiplaneta',
   database: 'dh_fs_node10',
   host: 'localhost',
-  dialect: 'mysql' 
+  dialect: 'mysql'
 }
 
 module.exports = config;

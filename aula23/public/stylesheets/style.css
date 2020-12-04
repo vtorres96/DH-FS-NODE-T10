@@ -20,6 +20,11 @@ form textarea {
   height: calc(100vh - 100px);
 }
 
+.contacts-min-height {
+  height: calc(100vh - 20px);
+}
+
+
 .logo {
   width: 50px;
   height: 50px;

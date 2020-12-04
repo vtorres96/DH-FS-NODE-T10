@@ -3,13 +3,21 @@ const { Card } = require('../models/');
 
 module.exports = {
   async list(req, res, next) {
+    let { page = 1 } = req.query;
+    page = parseInt(page);
+    let limit = 10;
     let contacts = await Contact.findAll({
       where: {
         excluido: 0
-      }
+      },
+      limit: limit,
+      offset: ((page - 1) * limit),
+      distinct: true
     });
+    let total = contacts.length;
+    console.log(total, page)
 
-    res.render('contacts', { contacts, user: req.session.user });
+    res.render('contacts', { contacts, user: req.session.user, page, total });
   },
 
   async create(req, res, next) {

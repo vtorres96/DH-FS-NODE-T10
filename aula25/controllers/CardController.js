@@ -1,7 +1,8 @@
-const cards = require("../data/cards")
+const { Card } = require("../models");
 
 module.exports = {
-  index(req, res, next) {
+  async index(req, res, next) {
+    let cards = await Card.findAll();
     res.render('index', { cards, user: req.session.user });
   }
 }

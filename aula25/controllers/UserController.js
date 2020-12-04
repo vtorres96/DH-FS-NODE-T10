@@ -1,20 +1,17 @@
 const bcrypt = require("bcrypt");
-const users = require("../data/users");
-const cards = require("../data/cards");
-const saveData = require("../utils/saveData");
+const { User } = require("../models");
+const { Card } = require("../models");
 
 module.exports = {
   create(req, res, next) {
     res.render('create-user');
   },
 
-  save(req, res, next) {
-    let id = users.length + 1;
+  async save(req, res, next) {
     req.body.password = bcrypt.hashSync(req.body.password, 10);
-    let user = { id, ...req.body }
-    users.push(user)
-
-    saveData(users, "users.js");
+    let user = { ...req.body }
+    
+    await User.create(user);
 
     res.render('create-user', { added: true });
   },
@@ -23,9 +20,11 @@ module.exports = {
     res.render('login');
   },
 
-  authenticate(req, res, next) {
+  async authenticate(req, res, next) {
+    let cards = await Card.findAll();
+
     let { email, password } = req.body;
-    let user = users.find(user => email == user.email);
+    let user = await User.findOne({ where: { email } });
 
     if(!user){
       return res.render('login', { notFound: true });

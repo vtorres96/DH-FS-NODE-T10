@@ -13,6 +13,8 @@ module.exports = {
       limit: limit,
       offset: ((page - 1) * limit)
     });
+    
+    let total = contacts.length;
 
     res.render('contacts', { contacts, user: req.session.user, page, total });
   },

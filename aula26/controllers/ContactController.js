@@ -1,4 +1,4 @@
-const { Contact, Card } = require("../models")
+const { Contact, Card, Sequelize } = require("../models");
 
 module.exports = {
   async list(req, res, next) {
@@ -66,6 +66,27 @@ module.exports = {
     
     res.render('contacts', { contacts, deleted: true });
   },
+
+  async search(req, res, next) {
+    let { word = '', page = 1 } = req.query;
+    page = parseInt(page);
+    let limit = 10;
+
+    let contacts = await Contact.findAll({
+      where: {
+        email: {
+          [Sequelize.Op.like]: `%${word}%`
+        },
+        deleted: 0
+      },
+      limit: limit,
+      offset: ((page - 1) * limit)
+    });
+    
+    let total = contacts.length;
+
+    res.render('contacts', { contacts, user: req.session.user, page, total, word });
+  }
 }
 
 

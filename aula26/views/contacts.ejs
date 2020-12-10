@@ -6,6 +6,17 @@
       <h1>Mensagens de Contato</h1>
       <p>Confira abaixo as mensagens recebidas</p>
 
+      <form action="/contato/pesquisar" method="GET">
+        <div class="row mb-4">
+          <div class="col">
+            <input type="text" class="form-control" name="word" placeholder="Pesquise por e-mail"> 
+          </div>
+          <div class="pr-3">
+            <button class="btn btn-primary">Pesquisar</button>
+          </div>
+        </div>
+      </form>
+
       <% if (typeof deleted !== "undefined") { %>
         <div class="col-md-12 alert alert-success">
           Mensagem de contato excluída com sucesso
@@ -74,15 +85,23 @@
       <div class="mt-3 d-flex justify-content-center">
         <nav aria-label="Page navigation example">
           <ul class="pagination">
+            <% 
+              let hrefPaginacao = '';
+              if(typeof word !== 'undefined'){
+                hrefPaginacao = '/contato/pesquisar?word=' + word + '&page='
+              } else {
+                hrefPaginacao = '/contato/listar?page='
+              }
+            %> 
             <% if(page > 1){ %> 
               <li class="page-item">
-                <a class="page-link" href="/contato/listar?page=<%= page - 1 %>" aria-label="Previous">
+                <a class="page-link" href="<%= hrefPaginacao + (page - 1) %>" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>       
             <% } else { %>
               <li class="page-item">
-                <a class="page-link" aria-label="Next">
+                <a class="page-link" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
@@ -90,7 +109,7 @@
             
             <% if(total >= 10) { %>
               <li class="page-item">
-                <a class="page-link" href="/contato/listar?page=<%= page + 1 %>" aria-label="Next">
+                <a class="page-link" href="<%= hrefPaginacao + (page + 1)%>" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                 </a>
               </li>

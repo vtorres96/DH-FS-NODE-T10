@@ -10,4 +10,6 @@ router.post('/alterar/:id', ContactController.update);
 
 router.get('/excluir/:id', ContactController.delete);
 
+router.get('/pesquisar', ContactController.search);
+
 module.exports = router;

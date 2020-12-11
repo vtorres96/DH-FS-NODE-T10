@@ -2,22 +2,33 @@ const { Contact, Card, Sequelize } = require("../models");
 
 module.exports = {
   async list(req, res, next) {
-    let { page = 1 } = req.query;
+    let { word = '', page = 1 } = req.query;
     page = parseInt(page);
     let limit = 10;
 
     let contacts = await Contact.findAll({
       where: {
+        email: {
+          [Sequelize.Op.like]: `%${word}%`
+        },
         deleted: 0
       },
       limit: limit,
       offset: ((page - 1) * limit) 
     });
     
-    [180, 182, 183, 184, 185, 186, 187, 188]
-    let total = contacts.length;
+    let total = await Contact.findAll({ 
+      where: {
+        email: {
+          [Sequelize.Op.like]: `%${word}%`
+        },
+        deleted: 0
+      }
+    });
 
-    res.render('contacts', { contacts, user: req.session.user, page, total });
+    let totalPages = Math.ceil(total.length / limit);
+
+    res.render('contacts', { contacts, user: req.session.user, page, totalPages, word });
   },
 
   async create(req, res, next) {

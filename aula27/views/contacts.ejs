@@ -6,6 +6,17 @@
       <h1>Mensagens de Contato</h1>
       <p>Confira abaixo as mensagens recebidas</p>
 
+      <form action="/contato/listar" method="GET">
+        <div class="row mb-4">
+          <div class="col">
+              <input type="text" name="word" value="<%= word %>" class="form-control" placeholder="Pesquise por e-mail">
+          </div>
+          <div class="pr-3">
+            <button type="submit" class="btn btn-primary">Pesquisar</button>
+          </div>
+        </div>
+      </form>
+
       <% if (typeof deleted !== "undefined") { %>
         <div class="col-md-12 alert alert-success">
           Mensagem de contato excluída com sucesso
@@ -74,9 +85,17 @@
       <div class="mt-3 d-flex justify-content-center">
         <nav aria-label="Page navigation example">
           <ul class="pagination">
+            <% 
+              let hrefPaginacao = '';
+              if(typeof word !== "undefined"){
+                hrefPaginacao = '/contato/listar?word=' + word + '&page=';
+              } else {
+                hrefPaginacao = '/contato/listar?page=';
+              }
+            %> 
             <% if(page > 1){ %> 
               <li class="page-item">
-                <a class="page-link" href="/contato/listar?page=<% page - 1 %>" aria-label="Previous">
+                <a class="page-link" href="<%= hrefPaginacao + (page - 1) %>" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>       
@@ -88,9 +107,9 @@
               </li>
             <% } %> 
             
-            <% if(totalPage >= 10) { %>
+            <% if(totalPages > page) { %>
               <li class="page-item">
-                <a class="page-link" href="/contato/listar?page=<%= page + 1 %>" aria-label="Next">
+                <a class="page-link" href="<%= hrefPaginacao + (page + 1) %>" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                 </a>
               </li>

@@ -1,0 +1,40 @@
+Aula 1 - JS
+1- mostrar como vincular arquivo .js no template engine. OK
+2- abordar sobre conceitos e utilizacao do DOM, com window e document. OK
+3- abordar sobre conceitos de alert, prompt e confirm. OK
+4- abordar sobre querySelector que pega apenas o primeiro elemento encontrado.
+e o querySelectorAll que encontra todos elementos. (Podendo ser por tag, id ou class) OK
+5- abordar sobre getElementById e getElementByClassName. 
+6- abordar sobre como modificar estilos. Ex: document.querySelector('h1').style.color = 'red';
+7- abordar sobre como modificar classes. Ex: document.querySelector('h1').classList.add('x');
+    document.querySelector('h1').classList.remove('x'); 
+    document.querySelector('h1').classList.toggle('x');
+    document.querySelector('h1').classList.contains('x');
+
+Aula 2 - JS
+1- mostrar o addEventListener com alguns eventos como por exemplo onclick e onload.
+2- mostrar o onmouseOver, onMouseOut e onClick. De forma que tenhamos desafios, onde,
+onClick terá que rotacionar o logo de cabeça pra baixo com animação. E, no caso, de 
+passar o mouse teremos que aumentar o card, e, quando for removido o foco do mouse, 
+voltar o card para seu tamanho original.
+3- mostrar eventos keyup e keydown, e focar no keypress para adicionar no projeto no futuro.
+4- mostrar timer com setTimeOut e explicar que executa após um tempo determinado, diferente,
+da setInterval que executa a cada X segundos, após isso, passar um desafio utilizando setTimeOut
+com a funcao de pegar o que o usuário digitou no campo de filtro por palavra, e, 
+colocar um tempo de espera para que só execute 1 segundo após o usuário parar de digitar
+
+Aula 3 - JS
+1- mostrar focus (quando acontece foco em um campo), alterando a cor do campo que está com foco
+1.b- blur (quando é retirado foco de um campo), retornando a cor original do campo que perdeu o foco
+1.c- change (quando o valor de um campo foi alterado), capturando valor selecionado em select
+1.d- submit (quando o form é enviado através de um botão, ou, input de tipo submit). Bloqueando
+botão de envio de formulário quando os campos não tiverem valores.
+2- fazer uma validação de formulário simples verificando se o campo nome não está em branco,
+se o usuário realmente digitou um e-mail verificando se existe o caracter '@' no que foi digitado,
+e verificando se o campo mensagem do textarea não está em branco. Aplicar um retorno de validação do tipo:
+deixar o campo com borda vermelha e abaixo um texto alertando o que ocorreu de erro.
+
+Aula 4 - JS 
+Efetuar fetch na api dos correios e aplicar em um formulário 
+
+Aula 5 - JS

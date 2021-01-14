@@ -1,3 +1,4 @@
+// Aula 1
 // verificando se o arquivo foi linkado corretamente
 // console.log('Hello World');
 
@@ -24,3 +25,41 @@
 // desafio mudar a cor das LI depois de 15 segundos que a página for carregada
 // lembrando que não vale utilizar document.querySelector, somente o document.querySelectorAll
 
+// Aula 2
+let logo = document.querySelector(".logo");
+let cards = document.querySelectorAll(".card-deck img");
+
+logo.addEventListener("mouseover", function() {
+  logo.style.transform = "rotate(180deg)";
+});
+
+logo.addEventListener("mouseout", function() {
+  logo.style.transform = "rotate(-360deg)";
+});
+
+for (let i = 0; i < cards.length; i++) {
+  cards[i].onmouseover = function(){
+    this.classList.remove('shrink');
+    this.classList.add('grow');
+  }
+
+  cards[i].onmouseout = function(){
+    this.classList.remove('grow');
+    this.classList.add('shrink');
+  } 
+}
+
+window.onscroll = function() {
+  myFunction()
+};
+
+let header = document.querySelector("nav");
+let sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}

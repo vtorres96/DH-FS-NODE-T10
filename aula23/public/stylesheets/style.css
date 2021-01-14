@@ -29,6 +29,7 @@ form textarea {
   width: 50px;
   height: 50px;
   border-radius: 50px;
+  transition: transform 0.8s ease-in-out; 
 }
 
 footer {
@@ -38,4 +39,24 @@ footer {
 .icons {
   font-size: 20px;
   color: #fff;
+}
+
+.grow {
+  animation: grow 0.3s;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.shrink {
+  animation: shrink 0.3s;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  scroll-behavior: smooth;
 }

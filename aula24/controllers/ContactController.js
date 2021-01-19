@@ -40,7 +40,8 @@ module.exports = {
 
   delete(req, res, next) {
     let id = req.params.id;
-    contacts.splice(id - 1, 1);
+    let contactsIndex = contacts.findIndex(contact.id === id);
+    contacts.splice(contactsIndex, 1);
 
     saveData(contacts, "contacts.js");
 

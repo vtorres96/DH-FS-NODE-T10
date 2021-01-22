@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+form textarea {
+  resize: none;
+}
+
+.container { 
+  margin-top: 100px;
+}
+
+.page-min-height {
+  height: calc(100vh - 100px);
+}
+
+.contact-min-height {
+  height: calc(100vh - 20px);
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  transition: transform 0.8s ease-in-out;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.shrink {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.grow {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-deck img {
+  opacity: 0.2;
+}
+
+.card-deck img:hover {
+  opacity: 1;
+}
+
+footer {
+  height: 100px;
+}
+
+.icons {
+  font-size: 20px;
+  color: #fff;
+}

@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+ul li a.active {
+  font-weight: 700;
+  color: #f2a82e;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+header {
+  /* border: solid 1px #d0d0d0; */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  text-align: center;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+}
+
+header h1 {
+  text-transform: uppercase;
+}
+
+ul.anchor-block {
+  padding: 0;
+  list-style: none;
+}
+
+ul.anchor-block a {
+  color: #555;
+  text-decoration: none;
+}
+
+ul.anchor-block li {
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+/* MAIN */
+
+main {
+  margin-top: 134px !important;
+}
+
+main#about {
+  padding: 5vh 0;
+  text-align: center;
+}
+
+main#about img {
+  width: 45vw;
+}
+
+section#contact, section#form, main > h2:first-child {
+  margin: 30px auto;
+  width: 80vw;
+}
+
+main#music {
+  padding: 5vh 0 0 15vw;
+  max-width: 100%;
+}
+
+main#music iframe {
+  width: 640px;
+  height: 360px;
+}
+div.quote-block {
+  margin: 5vh 0;
+}
+
+div.quote-block p {
+  margin: 0;
+  padding: 1vh 0;
+}
+
+
+section#banner {
+  background-image: url("../img/jane.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 72vh;
+}
+
+section#concept, section#songs {
+  padding: 40px 0;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 900px;
+}
+
+.duas-colunas {
+  overflow: hidden;
+}
+
+.duas-colunas > div {
+  float: left;
+  width: 50%;
+}
+
+
+
+form button {
+  background-color: orange;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.mapa {
+  padding-left: 30px;
+}
+
+.mapa iframe {
+  height: 400px;
+  width: 100%;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 5px;
+  width: 100%;
+}
+
+form textarea {
+  resize: none;
+  height: 50px;
+}
+
+.form-group {
+  margin: 0 0 10px;
+}
+
+section#songs img {
+  width: 100%;
+}
+
+section#songs li {
+  padding: 20px 0;
+}
+
+section#songs li strong {
+  color: #f2a82e;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #f2f2f2;
+}
+
+footer p {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+p.author {
+  color: #555;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .duas-colunas > div {
+    width: 100%;
+  }
+
+  label {
+    font-size: 24px;
+  }
+
+  section#concept,
+  section#songs {
+    padding: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 35px;
+    text-align: justify;
+  }
+
+  section#concept ol li {
+    font-size: 26px;
+  }
+
+  section#songs ol li {
+    font-size: 24px;
+  }
+
+  section#form form input {
+    padding: 10px;
+    font-size: 24px;
+  }
+
+  section#form form button {
+    font-size: 22px;
+    padding: 10px 35px;
+    margin: 20px 0;
+  }
+
+  section#form .form-group {
+    margin-bottom: 30px;
+  }
+
+  .mapa {
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  nav ul li a {
+    font-size: 24px;
+  }
+
+  main#music {
+    padding: 0 40px;
+  }
+
+  main#music iframe {
+    width: 100%;
+  }
+
+  main#music ul li {
+    font-size: 24px;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+#contact-list {
+  margin: 30px auto;
+  width: 80vw;
+}

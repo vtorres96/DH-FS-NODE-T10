@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Jane Doe</title>
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Jane Doe</h1>
+    <nav>
+      <ul class="anchor-block">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Contact</h2>
+    <section class="duas-colunas" id="form">
+      <div>
+        <form id="form-contact" method="POST">
+          <div class="form-group">
+            <label for="nome">Name</label>
+            <input type="text" name="nome" id="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Message</label>
+            <textarea name="mensagem" id="mensagem"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="marketing">How did you found Jane's Music?</label>
+            <div class="radio-group">
+              <input type="radio" name="marketing" id="instagram" value="instagram">
+              <label for="instagram">Instagram</label>
+            </div>
+            <div class="radio-group">
+              <input type="radio" name="marketing" id="facebook" value="facebook">
+              <label for="facebook">Facebook</label>
+            </div>
+            <div class="radio-group">
+              <input type="radio" name="marketing" id="youtube" value="youtube">
+              <label for="youtube">Youtube</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" name="newsletter" id="newsletter" value="y">
+            <label for="newsletter">Do you want to subscribe to our newsletter?</label>
+          </div>
+          <div class="message-contact d-none">Enviado com sucesso</div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49393.705095537596!2d-76.78884950330963!3d39.30850780424077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c8195fe5ff8d3b%3A0x1a4fd0a670afafcf!2sWoodlawn%2C%20MD%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1583347799016!5m2!1spt-BR!2sbr"
+          frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    </section>
+    <section id="contact-list">
+      <h1>Listando Contatos</h1>
+      <table>
+        <thead>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Mensagem</th>
+          <th>Marketing</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nome</td>
+            <td>E-mail</td>
+            <td>Mensagem</td>
+            <td>Marketing</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="contact">
+      <h3>MANAGEMENT | Karen Blanche</h3>
+      <p>email: <a href="mailto: info@mysite.com">info@mysite.com</a></p>
+      <p>phone: <a href="tel: 123-456-7890">123-456-7890</a></p>
+      <hr>
+      <h3>BOOKING | Daniel Ku</h3>
+      <p>email: <a href="mailto: info@mysite.com">info@mysite.com</a></p>
+      <p>phone: <a href="tel: 123-456-7890">123-456-7890</a></p>
+      <hr>
+      <h3>LABEL | Wix Records, Jake Coldham</h3>
+      <p>email: <a href="mailto: info@mysite.com">info@mysite.com</a></p>
+      <p>phone: <a href="tel: 123-456-7890">123-456-7890</a></p>
+      <hr>
+      <h3>PR | That Girl Pr, Sarah Brookstone</h3>
+      <p>email: <a href="mailto: info@mysite.com">info@mysite.com</a></p>
+      <p>phone: <a href="tel: 123-456-7890">123-456-7890</a></p>
+      <hr>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright - Jane Doe</p>
+  </footer>
+</body>
+
+</html>

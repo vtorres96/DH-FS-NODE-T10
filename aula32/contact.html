@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Jane Doe</title>
   <script defer src="./js/main.js"></script>
@@ -57,7 +58,7 @@
             <input type="checkbox" name="newsletter" id="newsletter" value="y">
             <label for="newsletter">Do you want to subscribe to our newsletter?</label>
           </div>
-          <div class="message-contact d-none">Enviado com sucesso</div>
+          <div class="message-contact d-none form-group alert alert-success">Enviado com sucesso</div>
           <button type="submit">Send</button>
         </form>
       </div>
@@ -69,12 +70,12 @@
     </section>
     <section id="contact-list">
       <h1>Listando Contatos</h1>
-      <table>
+      <table class="table">
         <thead>
-          <th>Nome</th>
-          <th>E-mail</th>
-          <th>Mensagem</th>
-          <th>Marketing</th>
+          <th scope="col">Nome</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Mensagem</th>
+          <th scope="col">Marketing</th>
         </thead>
         <tbody>
           <tr>

@@ -240,10 +240,6 @@ p.author {
   }
 }
 
-.d-none {
-  display: none;
-}
-
 #contact-list {
   margin: 30px auto;
   width: 80vw;

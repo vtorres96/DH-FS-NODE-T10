@@ -26,6 +26,8 @@ form.addEventListener('submit', (event) => {
   localStorage.setItem('contatos', JSON.stringify(contatos));
 
   exibeMensagem();
+
+  listaMensagens();
 });
 
 const exibeMensagem = () => {
@@ -37,3 +39,22 @@ const exibeMensagem = () => {
     mensagem.classList.add('d-none');
   }, 1500);
 }
+
+const listaMensagens = () => {
+  // transformando em array para adicionar item
+  let contatos = JSON.parse(localStorage.getItem('contatos')) || [];
+  let tBody = document.querySelector('#contact-list table tbody');
+
+  contatos.forEach(contato => {
+    tBody.innerHTML += `
+      <tr>
+        <td>${contato.nome}</td>
+        <td>${contato.email}</td>
+        <td>${contato.mensagem}</td>
+        <td>${contato.marketing}</td>
+      </tr>
+    `;
+  });
+}
+
+listaMensagens();

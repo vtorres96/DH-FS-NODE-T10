@@ -1,11 +1,11 @@
-const api = require('../config/api');
+const PhotoService = require('../services/PhotoService');
 
 module.exports = {
   async index(req, res, next){
     try {
-      let photos = await api.get('/photos');
-      let { data } = photos;
-      return res.status(200).json(data);
+      let photos = await PhotoService.getPhotos();
+
+      return res.status(200).json(photos);
     } catch (error) {
       return res.status(400).json({ message: 'Error ' + error.message })
     }

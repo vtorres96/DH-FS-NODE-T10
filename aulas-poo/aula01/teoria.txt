@@ -1,0 +1,25 @@
+O que é Programação Orientada a Objetos ?
+É um paradigma de programação baseado no conceito de objetos.
+Basicamente seria como se identificassemos algo do mundo real e transformassemos em objetos.
+Por exemplo: Teremos o desafio de tornar um cachorro uma classe, que irá conter atributos e métodos.
+
+O que é uma classe ?
+Uma classe é uma estrutura que abstrai um conjunto de informações do mundo real, 
+com características similares. 
+Por exemplo: Podemos criar uma classe Aparelho de som.
+
+O que são atributos ?
+Um conjunto de informações que pertencem ao mesmo contexto com a finalidade de definir
+o comportamento de uma classe.
+Por exemplo: Para a classe cadeira, teremos alguns atributos, os mais genéricos possíveis,
+que podemos identificar que compõe uma cadeira. No caso, teremos os seguintes atributos para
+a classe Cadeira:
+  - cor, tipo do material, peso, altura, largura, etc...
+
+O que são métodos ?
+  - São definições de comportamento dos objetos de uma classe.
+Por exemplo: No caso do aparelho de som o que podemos ter de comportamento dele ?
+Enfim... Um aparelho de som pode ser ligado e desligado, tocar músicas, trocar de frequência,
+retroceder música, avançar música, diminuir volume, aumentar volume, etc...
+
+
